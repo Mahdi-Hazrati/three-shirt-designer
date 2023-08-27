@@ -1,38 +1,40 @@
-// import { swatch, fileIcon, ai, logoShirt, stylishShirt } from "../assets";
+import { IoMdColorPalette , IoShirt} from "react-icons/io";
+import { AiFillFileAdd, AiFillRobot } from "react-icons/ai";
+import {GiMailShirt} from "react-icons/gi"
 
-// export const EditorTabs = [
-//   {
-//     name: "colorpicker",
-//     icon: swatch,
-//   },
-//   {
-//     name: "filepicker",
-//     icon: fileIcon,
-//   },
-//   {
-//     name: "aipicker",
-//     icon: ai,
-//   },
-// ];
+export const EditorTabs = [
+    {
+        name: "colorpicker",
+        icon: <IoMdColorPalette />,
+    },
+    {
+        name: "filepicker",
+        icon: <AiFillFileAdd />,
+    },
+    {
+        name: "aipicker",
+        icon: <AiFillRobot />,
+    },
+];
 
-// export const FilterTabs = [
-//   {
-//     name: "logoShirt",
-//     icon: logoShirt,
-//   },
-//   {
-//     name: "stylishShirt",
-//     icon: stylishShirt,
-//   },
-// ];
+export const FilterTabs = [
+    {
+        name: "logoShirt",
+        icon: <IoShirt/>,
+    },
+    {
+        name: "stylishShirt",
+        icon: <GiMailShirt/>,
+    },
+];
 
-// export const DecalTypes = {
-//   logo: {
-//     stateProperty: "logoDecal",
-//     filterTab: "logoShirt",
-//   },
-//   full: {
-//     stateProperty: "fullDecal",
-//     filterTab: "stylishShirt",
-//   },
-// };
+export const DecalTypes = {
+    logo: {
+        stateProperty: "logoDecal",
+        filterTab: "logoShirt",
+    },
+    full: {
+        stateProperty: "fullDecal",
+        filterTab: "stylishShirt",
+    },
+};
