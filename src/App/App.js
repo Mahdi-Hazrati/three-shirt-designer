@@ -1,10 +1,15 @@
+import Canvas from "../Components/Canvas/Canvas";
+import Home from "../Pages/Home/Home";
+import Main from "../Pages/Main/Main";
 import "./App.css";
 
 function App() {
     return (
-        <div className="App">
-            <h1 className="head-text">App</h1>
-        </div>
+        <main className="app transition-all ease-in">
+            <Home />
+            <Canvas />
+            <Main />
+        </main>
     );
 }
 
