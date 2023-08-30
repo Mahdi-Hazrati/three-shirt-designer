@@ -1,4 +1,4 @@
-import { IoMdColorPalette , IoShirt} from "react-icons/io";
+import { IoMdColorPalette , IoMdShirt} from "react-icons/io";
 import { AiFillFileAdd, AiFillRobot } from "react-icons/ai";
 import {GiMailShirt} from "react-icons/gi"
 
@@ -20,7 +20,7 @@ export const EditorTabs = [
 export const FilterTabs = [
     {
         name: "logoShirt",
-        icon: <IoShirt/>,
+        icon: <IoMdShirt/>,
     },
     {
         name: "stylishShirt",
