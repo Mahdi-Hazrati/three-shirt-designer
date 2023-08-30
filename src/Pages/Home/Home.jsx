@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <AnimatePresence>
       {snap.intro && (
-        <motion.section className="home" {...slideAnimation("left")}>
+        <motion.section className="home" {...slideAnimation("up")}>
           <motion.header {...slideAnimation("down")}>
             <img
               className='w-8 h-8 object-contain'
@@ -40,7 +40,7 @@ const Home = () => {
               // type : filled / outlined
                 type={"filled"}
                 innerText={"Let's Get Started !"}
-                customClassName={"w-fit px-4 py-2.5 font-bold text-sm "}
+                customClassName={"w-fit px-4 py-2.5 font-bold text-sm"}
                 clickHandler={() => state.intro = false}
               />
             </motion.div>
