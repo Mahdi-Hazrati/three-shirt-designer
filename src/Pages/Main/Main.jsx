@@ -41,6 +41,18 @@ const Main = () => {
               clickHandler={() => { state.intro = true }}
             />
           </motion.div>
+          {/* filter tabs */}
+          <motion.div className="filtertabs-container" {...slideAnimation("up")}>
+            {FilterTabs.map((tab) => {
+              <Tab
+                key={tab.name}
+                tab={tab}
+                isFilter
+                isActive=""
+                onClick={() => { }}
+              />
+            })}
+          </motion.div>
         </>
       )}
     </AnimatePresence>
