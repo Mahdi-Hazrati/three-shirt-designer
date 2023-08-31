@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/three-shirt-designer/static/css/main.79d0f244.css",
+    "main.js": "/three-shirt-designer/static/js/main.1154ceb5.js",
+    "index.html": "/three-shirt-designer/index.html",
+    "main.79d0f244.css.map": "/three-shirt-designer/static/css/main.79d0f244.css.map",
+    "main.1154ceb5.js.map": "/three-shirt-designer/static/js/main.1154ceb5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79d0f244.css",
+    "static/js/main.1154ceb5.js"
+  ]
+}
