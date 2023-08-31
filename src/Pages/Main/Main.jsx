@@ -31,6 +31,16 @@ const Main = () => {
               </div>
             </div>
           </motion.div>
+          {/* Back button */}
+          <motion.div className="absolute z-10 top-5 right-5" {...fadeAnimation}>
+            <CustomButton
+              key={"back-button"}
+              type={"filled"}
+              innerText={"Back to Home"}
+              customClassName="w-fit px-4 py-2.5 font-bold text-sm"
+              clickHandler={() => { state.intro = true }}
+            />
+          </motion.div>
         </>
       )}
     </AnimatePresence>
