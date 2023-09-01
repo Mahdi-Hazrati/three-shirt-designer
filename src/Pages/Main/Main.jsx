@@ -51,8 +51,10 @@ const Main = () => {
                 isActive=""
                 onClick={() => { }}
               />
+              
             })}
           </motion.div>
+          
         </>
       )}
     </AnimatePresence>
