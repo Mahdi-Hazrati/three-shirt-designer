@@ -19,7 +19,7 @@ const Main = () => {
         <>
           {/* Right Menu */}
           <motion.div key="custom" className='absolute top-0 left-0 z-10' {...slideAnimation("left")}>
-            <div className="flex item-center min-h-screen">
+            <div className="flex items-center min-h-screen">
               <div className="editortabs-container tabs">
                 {EditorTabs.map((tab) => (
                   <Tab
@@ -43,7 +43,7 @@ const Main = () => {
           </motion.div>
           {/* filter tabs */}
           <motion.div className="filtertabs-container" {...slideAnimation("up")}>
-            {FilterTabs.map((tab) => {
+            {FilterTabs.map((tab) => (
               <Tab
                 key={tab.name}
                 tab={tab}
@@ -51,10 +51,9 @@ const Main = () => {
                 isActive=""
                 onClick={() => { }}
               />
-              
-            })}
+            ))}
           </motion.div>
-          
+
         </>
       )}
     </AnimatePresence>
