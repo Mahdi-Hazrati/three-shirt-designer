@@ -4,28 +4,20 @@ import state from "../../Config/state"
 import { useSnapshot } from 'valtio'
 import { useFrame } from '@react-three/fiber'
 import { Decal, useGLTF, useTexture } from "@react-three/drei"
+import Tshirt from "../../Assets/model/shirt.glb"
 
-
-
-const ThreeDModel = () => {
+export default function ThreeDModel(props) {
   const snap = useSnapshot(state)
-  const [nodes, materials] = useGLTF("./shirt_baked.glb")
-  const texture = useTexture(snap.logoDecal)
-  const fullTexture = useTexture(snap.fullDecal)
-
+  const { nodes, materials } = useGLTF(Tshirt)
   return (
-    <group>
+    <group {...props} dispose={null}>
       <mesh
-        castShadow
         geometry={nodes.T_Shirt_male.geometry}
         material={materials.lambert1}
-        material-roughness={1}
-        dispose={null}
       >
-
       </mesh>
     </group>
   )
 }
 
-export default ThreeDModel
+useGLTF.preload(Tshirt)
