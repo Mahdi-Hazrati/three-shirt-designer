@@ -13,8 +13,12 @@ export default function ThreeDModel(props) {
   const logoTexture = useTexture(snap.logoDecal)
   const fullTexture = useTexture(snap.fullDecal)
 
+  useFrame((srate, delta)=>{
+    easing.dampC(materials.lambert1.color, snap.color, 0.25, delta)
+  })
+  const stateAsString = JSON.stringify(snap)
   return (
-    <group {...props}>
+    <group {...props} key={stateAsString}>
       <mesh
         castShadow
         geometry={nodes.T_Shirt_male.geometry}
@@ -38,6 +42,8 @@ export default function ThreeDModel(props) {
             scale={0.15}
             position={[0, 0.05, 0.15]}
             rotation={[0, 0, 0]}
+            depthTest={false}
+            depthWrite={true}
           />
         )}
       </mesh>
