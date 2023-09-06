@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/three-shirt-designer/static/css/main.5c8cda3f.css",
-    "main.js": "/three-shirt-designer/static/js/main.5846fc44.js",
+    "main.js": "/three-shirt-designer/static/js/main.a54adc44.js",
     "static/media/shirt.glb": "/three-shirt-designer/static/media/shirt.5de480216be014e1a377.glb",
+    "static/media/three-js.png": "/three-shirt-designer/static/media/three-js.6d7ff628060d295cb9de.png",
     "index.html": "/three-shirt-designer/index.html",
     "main.5c8cda3f.css.map": "/three-shirt-designer/static/css/main.5c8cda3f.css.map",
-    "main.5846fc44.js.map": "/three-shirt-designer/static/js/main.5846fc44.js.map"
+    "main.a54adc44.js.map": "/three-shirt-designer/static/js/main.a54adc44.js.map"
   },
   "entrypoints": [
     "static/css/main.5c8cda3f.css",
-    "static/js/main.5846fc44.js"
+    "static/js/main.a54adc44.js"
   ]
 }
