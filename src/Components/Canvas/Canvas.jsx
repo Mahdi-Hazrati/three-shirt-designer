@@ -11,12 +11,12 @@ const Canvas = () => {
     <FiberCanvas>
       <ambientLight intensity={0.5} />
       <Environment preset='city' />
-      {/* <CameraRig> */}
+      <CameraRig>
         {/* <Backdrop /> */}
         <Center>
           <ThreeDModel />
         </Center>
-      {/* </CameraRig> */}
+      </CameraRig>
     </FiberCanvas>
   )
 }
