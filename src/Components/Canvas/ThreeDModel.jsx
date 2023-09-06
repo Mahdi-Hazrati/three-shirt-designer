@@ -32,6 +32,14 @@ export default function ThreeDModel(props) {
           />
 
         )}
+        {snap.isLogoTexture && (
+          <Decal
+            map={logoTexture}
+            scale={0.15}
+            position={[0, 0.05, 0.15]}
+            rotation={[0, 0, 0]}
+          />
+        )}
       </mesh>
     </group>
   )
