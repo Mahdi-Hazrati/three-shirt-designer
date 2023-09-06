@@ -9,11 +9,18 @@ import Tshirt from "../../Assets/model/shirt.glb"
 export default function ThreeDModel(props) {
   const snap = useSnapshot(state)
   const { nodes, materials } = useGLTF(Tshirt)
+
+  const logoTexture = useTexture(snap.logoDecal)
+  const fullTexture = useTexture(snap.fullDecal)
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props}>
       <mesh
+        castShadow
         geometry={nodes.T_Shirt_male.geometry}
         material={materials.lambert1}
+        material-roughness={1}
+        dispose={null}
       >
       </mesh>
     </group>
