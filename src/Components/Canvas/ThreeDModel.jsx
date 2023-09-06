@@ -22,6 +22,16 @@ export default function ThreeDModel(props) {
         material-roughness={1}
         dispose={null}
       >
+        {snap.isFullTexture && (
+          <Decal
+            map={fullTexture}
+            scale={1}
+            position={[0, 0, 0]}
+            rotation={[0, 0, 0]}
+
+          />
+
+        )}
       </mesh>
     </group>
   )
