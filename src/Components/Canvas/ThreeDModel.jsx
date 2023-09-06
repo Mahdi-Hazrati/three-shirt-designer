@@ -14,7 +14,7 @@ export default function ThreeDModel(props) {
   const fullTexture = useTexture(snap.fullDecal)
 
   useFrame((srate, delta)=>{
-    easing.dampC(materials.lambert1.color, snap.color, 0.25, delta)
+    easing.dampC(materials.lambert1.color, snap.tshertColor, 0.25, delta)
   })
   const stateAsString = JSON.stringify(snap)
   return (
