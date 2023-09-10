@@ -13,6 +13,7 @@ const ColorPicker = () => {
         presetColors={[
           "#ff0000", "#ff9900", "#e3d904", "#00ff00", "#00ccff", "#9900ff", "#ffffff", "#000000", "#ff66cc", "#33cc33"
         ]}
+  
         onChange={(color) => { state.tshertColor = color.hex }}
       />
     </div>

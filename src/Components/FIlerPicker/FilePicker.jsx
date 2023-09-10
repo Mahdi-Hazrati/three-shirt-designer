@@ -1,8 +1,10 @@
 import React from 'react'
 
-const FilePicker = () => {
+const FilePicker = ({file, setFile, readFile}) => {
   return (
-    <div>FilePicker</div>
+    <div>
+      
+    </div>
   )
 }
 
