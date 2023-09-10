@@ -8,7 +8,7 @@ import { EditorTabs, DecalTypes, FilterTabs } from "../../Config/constants"
 import { fadeAnimation, slideAnimation } from "../../Config/motion"
 import { AiOutlineDownload } from "react-icons/ai"
 import { CustomButton, AiPicker, ColorPicker, FilePicker, Tab, Canvas }
-  from "../../Components/index"
+  from "../../Components"
 import "./Main.css"
 
 const Main = () => {
@@ -17,11 +17,20 @@ const Main = () => {
   const [prompt, setPrompt] = useState("")
   const [generateImage, setGenerateImage] = useState("")
   const [activeEditorTab, setActiveEditorTab] = useState("")
-  const [activeFilterTab, setActiveFilterTab] = useState({logoShirt:true, stylishShirt:false})
+  const [activeFilterTab, setActiveFilterTab] = useState({ logoShirt: true, stylishShirt: false })
 
   // show tab content depending on active tab
-  const generateTabContent = ()=>{
-    // some thing
+  const generateTabContent = () => {
+    switch (activeEditorTab) {
+      case "colorpicker":
+        return <ColorPicker />
+      case "filepicker":
+        return <FilePicker />
+      case "aipicker":
+        return <AiPicker />
+      default:
+        return null;
+    }
   }
   return (
     <AnimatePresence>
@@ -35,9 +44,10 @@ const Main = () => {
                   <Tab
                     key={tab.name}
                     tab={tab}
-                    onClick={() => { }}
+                    onClick={() => { setActiveEditorTab(tab.name) }}
                   />
                 ))}
+                {generateTabContent()}
               </div>
             </div>
           </motion.div>
