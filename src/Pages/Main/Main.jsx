@@ -13,6 +13,16 @@ import "./Main.css"
 
 const Main = () => {
   const snap = useSnapshot(state)
+  const [file, setFile] = useState("")
+  const [prompt, setPrompt] = useState("")
+  const [generateImage, setGenerateImage] = useState("")
+  const [activeEditorTab, setActiveEditorTab] = useState("")
+  const [activeFilterTab, setActiveFilterTab] = useState({logoShirt:true, stylishShirt:false})
+
+  // show tab content depending on active tab
+  const generateTabContent = ()=>{
+    // some thing
+  }
   return (
     <AnimatePresence>
       {!snap.intro && (
