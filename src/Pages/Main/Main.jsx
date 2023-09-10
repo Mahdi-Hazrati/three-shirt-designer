@@ -36,7 +36,7 @@ const Main = () => {
     const decalType = DecalTypes[type]
     state[decalType.stateProperty] = result
 
-    if (!setActiveFilterTab[decal.filterTab]) {
+    if (!setActiveFilterTab[decalType.filterTab]) {
       handleActiveFilterTab(decalType.filterTab)
     }
     const handleActiveFilterTab = (tabName) => {

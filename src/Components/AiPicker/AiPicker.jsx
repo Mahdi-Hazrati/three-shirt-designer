@@ -2,7 +2,7 @@ import React from 'react'
 
 const AiPicker = () => {
   return (
-    <div>AiPicker</div>
+    <div className="aipicker-container">AiPicker</div>
   )
 }
 
