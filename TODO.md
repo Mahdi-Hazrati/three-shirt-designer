@@ -1,0 +1,6 @@
+- [ ]   Fix Logo not apply to shirt bug
+- [ ]   add persian language interface
+- [ ]   fix some style erorr
+- [ ]   add webstie url mahdihazrati.ir
+- [ ]   add tab logo toggle
+- [ ]   clean and make minimal
