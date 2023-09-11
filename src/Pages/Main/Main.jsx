@@ -36,9 +36,6 @@ const Main = () => {
     const decalType = DecalTypes[type]
     state[decalType.stateProperty] = result
 
-    if (!setActiveFilterTab[decalType.filterTab]) {
-      handleActiveFilterTab(decalType.filterTab)
-    }
     const handleActiveFilterTab = (tabName) => {
       switch (tabName) {
         case "logoShirt":
@@ -47,7 +44,7 @@ const Main = () => {
         case "stylishShirt":
           state.isFullTexture = !activeFilterTab[tabName]
           break
-        
+
         default:
           state.isLogoTexture = true
           state.isFullTexture = false
@@ -55,15 +52,19 @@ const Main = () => {
 
 
     }
+    if (!setActiveFilterTab[decalType.filterTab]) {
+      handleActiveFilterTab(decalType.filterTab)
+    }
 
 
   }
   const readFile = (type) => {
-    reader(file).then((result) => {
-      handleDecals(type, result)
-      setActiveEditorTab("")
+    reader(file)
+      .then((result) => {
+        handleDecals(type, result)
+        setActiveEditorTab("")
 
-    })
+      })
 
   }
   return (

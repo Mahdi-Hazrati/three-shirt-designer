@@ -1,4 +1,5 @@
 import React from 'react'
+import CustomButton from '../CustomButton/CustomButton'
 
 const FilePicker = ({ file, setFile, readFile }) => {
   return (
@@ -11,9 +12,24 @@ const FilePicker = ({ file, setFile, readFile }) => {
           onChange={(event) => { setFile(event.target.files[0]) }}
         />
         <label htmlFor="file-upload" className="filepicker-label">Upload File</label>
-        <p className="mt-2 text-gray-500 text-xs truncate">
+        <p className="mt-2 text-gray-800 text-xs truncate">
           {file === "" ? "No file selected!" : file.name}
         </p>
+      </div>
+      <div className="mt-3 flex flex-wrap gap-3">
+        <CustomButton
+          type="outlined"
+          innerText="Logo"
+          customClassName="text-xs"
+          clickHandler={() => { readFile("logo") }}
+        />
+        <CustomButton
+          type="filled"
+          innerText="Texture"
+          customClassName="text-xs"
+          clickHandler={() => { readFile("full") }}
+        />
+
       </div>
     </div>
   )
